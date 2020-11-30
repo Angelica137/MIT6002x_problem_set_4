@@ -33,10 +33,13 @@ INTERVAL_2 = list(range(2006, 2016))
 """
 Begin helper code
 """
+
+
 class Climate(object):
     """
     The collection of temperature records loaded from given csv file
     """
+
     def __init__(self, filename):
         """
         Initialize a Climate instance, which stores the temperature records
@@ -52,7 +55,8 @@ class Climate(object):
         for line in f:
             items = line.strip().split(',')
 
-            date = re.match('(\d\d\d\d)(\d\d)(\d\d)', items[header.index('DATE')])
+            date = re.match('(\d\d\d\d)(\d\d)(\d\d)',
+                            items[header.index('DATE')])
             year = int(date.group(1))
             month = int(date.group(2))
             day = int(date.group(3))
@@ -66,7 +70,7 @@ class Climate(object):
             if month not in self.rawdata[city][year]:
                 self.rawdata[city][year][month] = {}
             self.rawdata[city][year][month][day] = temperature
-            
+
         f.close()
 
     def get_yearly_temp(self, city, year):
@@ -112,12 +116,13 @@ class Climate(object):
         return self.rawdata[city][year][month][day]
 
 
-
 """
 End helper code
 """
 
 # Problem 1
+
+
 def generate_models(x, y, degs):
     """
     Generate regression models by fitting a polynomial for each degree in degs
@@ -130,10 +135,12 @@ def generate_models(x, y, degs):
         a list of numpy arrays, where each array is a 1-d array of coefficients
         that minimizes the squared error of the fitting polynomial
     """
-    # TODO
-    pass
+
+    return [np.polyfit(x, y, z) for z in degs]
 
 # Problem 2
+
+
 def r_squared(y, estimated):
     """
     Calculate the R-squared error term.
@@ -147,6 +154,8 @@ def r_squared(y, estimated):
     pass
 
 # Problem 3
+
+
 def evaluate_models_on_training(x, y, models):
     """
     For each regression model, compute the R-square for this model with the
@@ -172,7 +181,7 @@ def evaluate_models_on_training(x, y, models):
     pass
 
 
-### Begining of program
+# Begining of program
 raw_data = Climate('data.csv')
 
 # Problem 3
@@ -189,5 +198,5 @@ x1 = INTERVAL_1
 x2 = INTERVAL_2
 y = []
 # MISSING LINES
-models = generate_models(x, y, [1])    
+models = generate_models(x, y, [1])
 evaluate_models_on_training(x, y, models)
