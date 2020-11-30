@@ -121,3 +121,18 @@ y.append(numpy.mean(raw_data.get_yearly_temp('BOSTON', year)))
 # Problem 4-2
 
 What is the R^2 value? (use 3 decimal places)
+= 0.085
+
+# Problem 5
+
+Which graph, choosing a specific day (Jan 10) or calculating the yearly average, indicates that almost none of the data variation is learned by our model?
+
+- choosing a specific day
+- calculating the yearly average
+  unanswered
+
+Which graph, choosing a specific day (Jan 10) or calculating the yearly average, supports more the claim that global warming is leading to an increase in temperature?
+
+- choosing a specific day
+- calculating the yearly average
+  unanswered
