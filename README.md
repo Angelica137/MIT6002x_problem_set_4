@@ -113,7 +113,11 @@ for year in INTERVAL_1:
 y.append(numpy.mean(raw_data('BOSTON', year)))
 
 for year in INTERVAL_1:
-y.append(numpy.mean(raw_data.get_yearly_temp('BOSTON', year)))
+y.append(numpy.mean(raw_data.get_yearly_temp('BOSTON', year))) = correct
 
 for year in INTERVAL_2:
 y.append(numpy.mean(raw_data.get_yearly_temp('BOSTON', year)))
+
+# Problem 4-2
+
+What is the R^2 value? (use 3 decimal places)
