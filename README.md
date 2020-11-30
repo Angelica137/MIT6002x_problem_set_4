@@ -127,12 +127,10 @@ What is the R^2 value? (use 3 decimal places)
 
 Which graph, choosing a specific day (Jan 10) or calculating the yearly average, indicates that almost none of the data variation is learned by our model?
 
-- choosing a specific day
+- choosing a specific day = correct
 - calculating the yearly average
-  unanswered
 
 Which graph, choosing a specific day (Jan 10) or calculating the yearly average, supports more the claim that global warming is leading to an increase in temperature?
 
 - choosing a specific day
-- calculating the yearly average
-  unanswered
+- calculating the yearly average = correct
